@@ -11,9 +11,9 @@ if [ ! -z "$HEROKU_APP_NAME" ]; then
 	wp_password=$(dd if=/dev/urandom bs=1 count=16 2>/dev/null | base64 -w 0 | rev | cut -b 2- | rev)
 	wp_email="vmatteus@gmail.com"
 
-	# Copy db postgres into original file
-	cp config/pg4wp/db.php wp/wp-content
-
 	# wordpress: install
 	vendor/bin/wp core install --url="$wp_url" --title="$wp_title" --admin_user="$wp_user" --admin_password="$wp_password" --admin_email="$wp_email"
+
+	# Copy db postgres into original file
+	cp config/pg4wp/db.php wp/wp-content
 fi
