@@ -9,8 +9,6 @@ $webroot_dir = $root_dir . '/web';
 /**
  * Expose global env() function from oscarotero/env
  */
-Env::init();
-
 use function Env\env;
 
 /**
