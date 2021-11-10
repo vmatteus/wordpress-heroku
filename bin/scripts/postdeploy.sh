@@ -15,5 +15,6 @@ if [ ! -z "$HEROKU_APP_NAME" ]; then
 	vendor/bin/wp core install --url="$wp_url" --title="$wp_title" --admin_user="$wp_user" --admin_password="$wp_password" --admin_email="$wp_email"
 
 	# Copy db postgres into original file
-	cp config/pg4wp/db.php web/wp/wp-content
+	cp -r config/pg4wp web/wp/wp-content
+	cp web/wp/wp-content/pg4wp/db.php web/wp/wp-content
 fi

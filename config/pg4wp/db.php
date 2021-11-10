@@ -32,8 +32,6 @@ else if( file_exists( ABSPATH.'/wp-content/plugins/pg4wp'))
 	define( 'PG4WP_ROOT', ABSPATH.'/wp-content/plugins/pg4wp');
 else if( file_exists( ABSPATH.'/pg4wp'))
 	define( 'PG4WP_ROOT', ABSPATH.'/pg4wp');
-else if( file_exists( ABSPATH.'/config/pg4wp'))
-	define( 'PG4WP_ROOT', ABSPATH.'/pg4wp');
 else
 	die('PG4WP file directory not found');
 
